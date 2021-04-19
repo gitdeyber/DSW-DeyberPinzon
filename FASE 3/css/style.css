@@ -1,8 +1,130 @@
 *{
-	margin: 10;
+ box-sizing: border-box;
+	margin: 0;
 	padding: 0;
-	border: 0;	
+	
+ }
+html{
+	height: 100%;
 }
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1.2rem;
+	min-height: 100%;
+	
+}
+.grid-container > * {
+	box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+	border-radius: 4px;
+	padding: 10px;
+	text-align: center;
+	}
+
+	.header  {
+		grid-area: header;
+		background-color: linen;
+		
+	}
+	.navegacion{
+
+		grid-area: navegacion;
+		background-color:#F0FFF0;
+		text-align: center
+		;
+		}
+	.articulo{
+		grid-area: articulo;
+		background-color: floralwhite;
+	
+	}
+	.mapa{
+		grid-area: mapa;
+		background-color: rgb(243, 238, 190);
+	}
+	.footer{ 	
+		grid-area: footer;
+		background-color: palegoldenrod;
+	}
+.aside{
+	grid-area: aside;
+	background-color: lightslategray;
+
+
+	
+}
+.grid-container {
+	display: grid;
+	gap: 10px;
+	grid-template-areas:
+	"header"
+	"navegacion"
+	"articulo"
+	"mapa"
+	"aside"
+	"footer"
+	;
+}
+
+@media (min-width: 600px) {
+	.grid-container{
+		grid-template:
+		"header header" 250px
+		"navegacion navegacion" 200px
+		" mapa articulo" auto
+		"aside aside" auto
+		"footer footer"50px / 500px auto
+		; 
+	}
+}
+
+aside ul{
+	display: inline-block;
+	background:#F0FFF0;
+	list-style: none;
+}
+
+ul, ol {
+	list-style: none;
+	}
+
+	
+	.Menu li a {
+		
+		color: fff;
+		text-decoration: none;
+		padding: 20px;
+		display: block;
+	}
+
+	.Menu li a:hover {
+		background-color: khaki;
+	}
+	.Menu > li {
+		float: left;
+		padding: 15px, 30px;
+	}
+	.Menu li ul {
+		display: none;
+		position:absolute;
+		min-width: 140px;
+	}
+	.Menu li:hover > ul {
+		display: block;
+	}
+	
+	.Menu{
+		float: center;
+	}
+
+	p{
+		color: #696969;
+		font-size: 100%;
+		line-height: 100%;
+		padding: 1%;
+		text-indent: 2%;
+		text-align: justify;
+	}
+/*
  body {
  	background: #f7fff0;
  }
@@ -85,21 +207,18 @@ header #logo img {
 	float: left;
 	width: 500px;
 }
-
 .navegacion{
 	width: 700px;
 	margin: auto;
 	font-family: Arial, Helvetica, sans-serif;
 }
-
- 
- ul, ol {
+ul, ol {
 list-style: none;
 }
 
 .Menu li a {
 	background-color:lemonchiffon ;
-	color: 000;
+	color: fff;
 	text-decoration: none;
 	padding: 15px, 30px;
 	display: block;
@@ -122,3 +241,4 @@ background-color: khaki;
 	display: block;
 
 }
+*/
